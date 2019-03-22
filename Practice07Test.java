@@ -102,7 +102,7 @@ public class Practice07Test {
 				}
 			}
 		} catch (Exception e) {
-			// e.printStackTrace();  // Uncomment this line if you see errors in timing test.
+			e.printStackTrace();  // Uncomment this line if you see errors in timing test.
 			return Long.MAX_VALUE;
 		}
 		return System.currentTimeMillis() - start;
@@ -167,7 +167,7 @@ public class Practice07Test {
 		
 		List<Integer> timinglist = new ArrayList<Integer>();
 		long time = timingTest(timinglist);
-		if (time < 20) {
+		if (time < 200) {
 			grade += 5;
 			System.out.println("[+ 5%] Passed ArrayList timing test in " + time + "ms.");
 		} else if (time == Long.MAX_VALUE) {
@@ -177,7 +177,7 @@ public class Practice07Test {
 		}
 		timinglist = new LinkedList<Integer>();
 		time = timingTest(timinglist);
-		if (time < 35) {
+		if (time < 200) {
 			grade += 5;
 			System.out.println("[+ 5%] Passed LinkedList timing test in " + time + "ms.");
 		} else if (time == Long.MAX_VALUE) {
