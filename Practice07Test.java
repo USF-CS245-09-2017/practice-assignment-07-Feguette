@@ -102,7 +102,7 @@ public class Practice07Test {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();  // Uncomment this line if you see errors in timing test.
+			// e.printStackTrace();  // Uncomment this line if you see errors in timing test.
 			return Long.MAX_VALUE;
 		}
 		return System.currentTimeMillis() - start;
@@ -167,23 +167,23 @@ public class Practice07Test {
 		
 		List<Integer> timinglist = new ArrayList<Integer>();
 		long time = timingTest(timinglist);
-		if (time < 200) {
+		if (time < 20) {
 			grade += 5;
 			System.out.println("[+ 5%] Passed ArrayList timing test in " + time + "ms.");
 		} else if (time == Long.MAX_VALUE) {
 			System.out.println("[    ] Failed timing test -- there's an Exception in the ArrayList implementation.");
 		} else {
-			System.out.println("[    ] Failed timing test for ArrayList -- took " + time + "ms. (Should be less than 200ms.)");
+			System.out.println("[    ] Failed timing test for ArrayList -- took " + time + "ms. (Should be less than 20ms.)");
 		}
 		timinglist = new LinkedList<Integer>();
 		time = timingTest(timinglist);
-		if (time < 200) {
+		if (time < 35) {
 			grade += 5;
 			System.out.println("[+ 5%] Passed LinkedList timing test in " + time + "ms.");
 		} else if (time == Long.MAX_VALUE) {
 			System.out.println("[    ] Failed timing test -- there's an Exception in the LinkedList implementation.");
 		} else {
-			System.out.println("[    ] Failed timing test for LinkedList -- took " + time + "ms. (Should be less than 200ms.)");
+			System.out.println("[    ] Failed timing test for LinkedList -- took " + time + "ms. (Should be less than 35ms.)");
 		}
 		
 		System.out.println("Grade for this assignment: " + grade + "%");
